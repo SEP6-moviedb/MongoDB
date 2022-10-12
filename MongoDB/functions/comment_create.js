@@ -6,12 +6,12 @@ exports = async function (request, response) {
     .get("mongodb-atlas")
     .db("MovieStarDB")
     .collection("comments")
-    .insertOne({ timestamp: new Date(), Usercomment: {
+    .insertMany([{ timestamp: new Date(), Usercomment: {
       movieid: bodyJson.movieid.toString(),
       comment: bodyJson.comment.toString(),
       username: bodyJson.username.toString()
       
-    }});
+    }}]);
   // 3. Configure the response
   response.setBody("Request was successful");
 } 
