@@ -11,7 +11,7 @@ exports = async function (request, response) {
       comment: bodyJson.comment.toString(),
       username: bodyJson.username.toString()
       
-    }}]);
+    }}]); 
   // 3. Configure the response
   response.setBody("Request was successful");
 } 
